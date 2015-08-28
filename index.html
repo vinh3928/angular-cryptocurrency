@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+  </head>
+  <body ng-controller="CurrencyController">
+    <input ng-model="inputAmount" ng-init="inputAmount = 0" type="text" name="" id="" value="" />
+     <select ng-model="bitType" ng-init="bitType = 'bitcoin'">
+      <option value="bitcoin">BTC</option>
+      <option value="dogecoin">XDG</option>
+      <option value="litecoin">LTC</option>
+    </select>
+    <h2>{{bitType}} :{{coinData[bitType].ask * inputAmount | currency}}</h2>
+    <script type="text/javascript" charset="utf-8" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" charset="utf-8" src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" charset="utf-8" src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script type="text/javascript" charset="utf-8" src="bower_components/firebase/firebase.js"></script>
+    <script type="text/javascript" charset="utf-8" src="app.js"></script>
+    <script type="text/javascript" charset="utf-8" src="controller.js"></script>
+  </body>
+</html>
+
